@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-    #before_action :set_usuario, only: [:create, :destroy]
-    #before_action :usuario_logado
+    before_action :set_usuario, only: [:create, :destroy]
+    before_action :usuario_logado
     def index
         @post = Post.all
     end
@@ -50,9 +50,9 @@ class PostsController < ApplicationController
 ###############################################################################33
     private
     
-   # def set_usuario
-   #     @usuario = Usuario.find(params[:usuario_id])
-   # end
+     def set_usuario
+         @usuario = Usuario.find(params[:usuario_id])
+     end
 
     def post_params
         params.require(:post).permit(:text, :usuario_id)

@@ -1,6 +1,6 @@
 class UsuariosController < ApplicationController
   before_action :set_usuario, only: [:show, :edit, :update, :destroy]
-  #before_action :usuario_logado, except: [:new, :create]
+  before_action :usuario_logado, except: [:new, :create]
 
     def index
         @usuarios = Usuario.all
