@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-4 mt-6">
+        <!--- lado esquerdo --->
+        <%= render 'usuarios/perfil' %>
+    </div>
+    <div class="col-4">
+        <!--- centro escrita --->
+        <%= render 'posts/form' %>
+        <!--- postagem --->
+        <div class="d-flex flex-column-reverse bd-highlight ">
+            <% @post.each do |post| %>
+                <div class="card border-primary mb-3  " >
+                    <div class="card-header font-weight-bold">                
+                    <%= post.id %>editar
+                    </div>
+                    <div class="card-body text-primary">
+                        <p class="card-text">
+                            <h4><%= post.text %></h4>
+                            <p> <%= post.created_at.strftime("%A, %d/%m")%></p>
+                            <td><%= link_to 'Excluir', posts_path(post), method: :delete %></td>
+                        </p>
+                    </div>
+                </div>
+            <% end %>    
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+|

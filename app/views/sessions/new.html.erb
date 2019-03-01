@@ -1,0 +1,36 @@
+
+<div class="container">    
+    <span class="brand-logo center blue-text text-darken-2"><i class="fa fa-twitter fa-5x"></i></span><br>
+       <%= form_for :session, url: sign_in_path do |f| %>              
+            <form>
+                <div class="form-group row">
+                    <div class="col-sm-7">
+                        <%= f.email_field :email, autofocus: true , class:'form-control mx-sm-3 col-md-8 ', placeholder:"E-mail"%>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-7">
+                        <%= f.password_field :password, autocomplete: "off", class:'form-control mx-sm-3 col-md-8', placeholder:"Senha" %>
+                    </div>
+                </div>            
+                <div class="form-group row">
+                  <%= f.check_box :remember_me %>
+                  Lembre-me
+                </div>
+                <div class="actions">
+                  <%= f.submit "Login", class: 'submit-session' %>
+                </div>
+            </form>            
+      <% end %>            
+      <div class="session-options">
+        <p>Novo usuário? <%= link_to "Inscrever-se agora!", new_usuario_path  %></p>
+      </div>
+    </div>
+  
+        
+
+
+
+
+
+

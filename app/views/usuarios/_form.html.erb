@@ -1,0 +1,8 @@
+<%= bootstrap_form_with(model: @usuario, local: true) do |f| %>
+    <%= f.text_field :nome%>  
+    <%= f.email_field :email %>
+    <%= f.password_field :password ,label:  "Senha"%>
+    <%= f.password_field :password_confirmation , label:  " Confirmar senha"  %>
+    <%= f.submit "Criar",class:"btn btn-primary btn-lg btn-block" %>
+<% end %>
+       

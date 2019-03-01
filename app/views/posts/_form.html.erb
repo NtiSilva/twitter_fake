@@ -1,0 +1,11 @@
+<%= form_with(model: Post.new, local: true) do |form| %>
+    <div class="field">
+        <%= form.label :message, :value => "O que está acontecendo?"%>
+        <%= form.text_area :text, id: :tweet_text, :class=> "materialize-textarea", size: "47x5" ,placeholder:"Abre o coração" %>
+    </div>
+    <div >
+        <%= form.submit :class => "btn waves-effect waves-light blue" "Postar"%>
+    </div>
+<% end %>
+
+

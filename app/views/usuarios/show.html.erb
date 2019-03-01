@@ -1,0 +1,16 @@
+<div class="container" style="background-color: #CEECF5;">
+ <div class="row justify-content-md-center">
+    <div class="col-5 col-md-8 mb-4">
+        <span class="brand-logo center blue-text text-darken-2"><i class="fa fa-twitter fa-5x"></i></span><br>  
+        <address>
+          <strong><%= @usuario.nome %></strong><br>
+          <a href="mailto:#"><%= @usuario.email %></a>
+        </address>  
+        <%= link_to 'Voltar', posts_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+
+
+
